@@ -25,18 +25,19 @@
             }
             set
             {
-                if(value < 1 ||value > 12)
+                if (value < 1 || value > 12)
                     throw new ArgumentException("Expected value mismatch! Argument: workHoursPerDay");
                 workHoursPerDay = value;
             }
         }
         protected decimal SalaryPerHour
-        { get
+        {
+            get
             {
                 return WeekSalary / workHoursPerDay / 5;
             }
         }
-        public Worker(string firstName, string lastName, decimal weekSalary, decimal workHoursPerDay):base(firstName, lastName)
+        public Worker(string firstName, string lastName, decimal weekSalary, decimal workHoursPerDay) : base(firstName, lastName)
         {
             WeekSalary = weekSalary;
             WorkHoursPerDay = workHoursPerDay;
