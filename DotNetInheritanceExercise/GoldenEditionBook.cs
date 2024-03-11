@@ -1,6 +1,6 @@
 ﻿namespace DotNetInheritanceExercise
 {
-    internal class GoldenEditionBook : Book
+    public class GoldenEditionBook : Book
     {
         protected override decimal Price
         {
